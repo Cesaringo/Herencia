@@ -1,0 +1,31 @@
+class Animal {
+    constructor(nombre, edad){
+    this.nombre= nombre;
+    this.edad= edad;
+
+}
+hacerSonido(){
+    console.log("El animal hace un sonido");
+}
+}
+
+class Perro extends Animal {
+   
+    constructor(nombre, edad, raza){
+        super(nombre, edad)
+        this.raza = raza;
+    }
+
+    hacerSonido(){
+        console.log("El perro ladra: ¡Guau!");
+    }
+}
+
+const animal = new Animal("Animalito", 5);
+animal.hacerSonido();
+
+const perro = new Perro("Perrito", 5, "Pitbull");
+
+console.log(`${perro.nombre} es un ${perro.raza} y tiene ${perro.edad} años.`);
+
+perro.hacerSonido();
